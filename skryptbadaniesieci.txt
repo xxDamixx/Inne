@@ -1,0 +1,10 @@
+for /L %i in (1,1,254) do ping 192.168.20.%i -n 2 >> c:\pingi.txt
+
+
+aby zadziałało:
+- uruchamiamy wiersz poleceń jako administrator
+- wklejamy linijke ze skryptem
+- Opis ustawień w nawiasie : (od jakiej cyfry?,co ile cyfr?,do jakiej cyfry?)
+- po komendzie ping wstawiamy adres sieci którą chcemy zeskanować. Przykład: xxx.xxx.xxx.%i
+- parametr -n 2 oznacza ilosc wysłanych próbek,  w tym wypadku 2. można edytować np na 4,6,8 lecz wydłuży to działanie
+- ścieżka zapisu dla wyniku skryptu: edytujemy po "">>"" można zmienić nazwe ale format musi być .txt 
